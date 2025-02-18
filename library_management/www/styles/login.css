@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background matching Frappe's theme */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #F8F9FA, #E3E8EE);
+}
+
+/* Stylish Login Card */
+.login-container {
+    background: white;
+    padding: 2rem;
+    width: 380px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 136, 204, 0.2);
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+/* Hover Glow Effect */
+.login-container:hover {
+    box-shadow: 0 12px 24px rgba(0, 136, 204, 0.3);
+}
+
+.login-container h2 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: #0088CC;
+}
+
+.input-group {
+    width: 100%;
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #555;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.2s ease-in-out;
+}
+
+.input-group input:focus {
+    border-color: #0088CC;
+    box-shadow: 0 0 5px rgba(0, 136, 204, 0.3);
+}
+
+/* Primary Button */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: #0088CC;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.login-btn:hover {
+    background: #006699;
+    box-shadow: 0 4px 10px rgba(0, 136, 204, 0.3);
+}
+
+.register-link {
+    margin-top: 1.2rem;
+    font-size: 14px;
+}
+
+.register-link a {
+    color: #0088CC;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/homeStyles.css">
+</head>
+
+<body>
+
+    <div class="landing-container">
+        <h1>📚 Welcome to the Library System</h1>
+        <p>Manage books, loans, and memberships efficiently.</p>
+        <div class="buttons">
+            <button onclick="navigate('login')" class="primary-btn">Sign In</button>
+            <button onclick="navigate('register')" class="secondary-btn">Sign Up</button>
+        </div>
+    </div>
+
+    <script>
+        function navigate(page) {
+            window.location.href = page;
+        }
+    </script>
+
+</body>
+
+</html>

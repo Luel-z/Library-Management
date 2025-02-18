@@ -1,0 +1,30 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+
+<div class="container mt-6">
+    <div class="row">
+
+        <div class="col-md-3 d-flex justify-content-center">
+            <img src="{{ doc.image }}" alt="{{ doc.book_title }}" class="img-fluid rounded shadow-sm">
+        </div>
+
+        <div class="col-md-9">
+            <h1 class="fw-bold">{{ doc.book_title }}</h1>
+            <p class="text-muted">By <strong>{{ doc.author }}</strong></p>
+
+            {% if doc.status == 'Available' %}
+            <span class="badge bg-success">Available</span>
+            {% elif doc.status == 'Issued' %}
+            <span class="badge bg-danger">Issued</span>
+            {% endif %}
+
+            <p><strong>Publisher:</strong> <span class="fw-bold">{{ doc.publisher }}</span></p>
+            <p><strong>ISBN:</strong> <span class="fw-bold">{{ doc.isbn }}</span></p>
+
+            <p class="mt-3">{{ doc.description }}</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

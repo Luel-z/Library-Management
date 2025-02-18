@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #F8F9FA, #E3E8EE);
+}
+
+.landing-container {
+    background: white;
+    padding: 2rem;
+    width: 380px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 136, 204, 0.2);
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.landing-container:hover {
+    box-shadow: 0 12px 24px rgba(0, 136, 204, 0.3);
+}
+
+h1 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: #0088CC;
+    font-size: 22px;
+}
+
+p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.primary-btn,
+.secondary-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.primary-btn {
+    background: #0088CC;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #006699;
+    box-shadow: 0 4px 10px rgba(0, 136, 204, 0.3);
+}
+
+.secondary-btn {
+    background: white;
+    color: #0088CC;
+    border: 2px solid #0088CC;
+}
+
+.secondary-btn:hover {
+    background: #0088CC;
+    color: white;
+}

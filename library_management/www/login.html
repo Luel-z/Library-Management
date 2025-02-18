@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Library System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/login.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="/api/method/login" method="post">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="usr" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="pwd" required>
+            </div>
+            <button type="submit" class="login-btn">Sign In</button>
+        </form>
+        <!-- <script>
+            function handleLogin(event) {
+                event.preventDefault();
+
+                let form = event.target;
+                let formData = new FormData(form);
+
+                fetch(form.action, {
+                    method: "POST",
+                    body: formData
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.home_page) {
+                            window.location.href = data.home_page;
+                            console.log(data);
+                        } else {
+                            alert("Login failed: " + data.message);
+                        }
+                    })
+                    .catch(error => console.error("Error:", error));
+            }
+        </script> -->
+        <p class="register-link">Don't have an account? <a href="/register">Register</a></p>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,766 @@
+{
+	"info": {
+		"_postman_id": "a014e945-2249-4ee6-8909-ef99b2e20805",
+		"name": "frappe",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28840711"
+	},
+	"item": [
+		{
+			"name": "BOOKS",
+			"item": [
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"book_title\":\"Harry Potter and the Sorcerer’s Stone\",\n  \"author\":\"J.K. Rowling\",\n  \"isbn\":\"978-0061120084\",\n  \"publisher\":\"Bloomsbury (UK) / Scholastic (US)\",\n  \"status\":\"Available\",\n  \"publish_date\":\"1997-07-26\",\n  \"description\":\"Harry Potter and the Sorcerer’s Stone introduces readers to Harry Potter, an orphaned boy who discovers he is a wizard on his 11th birthday. He is whisked away to Hogwarts School of Witchcraft and Wizardry, where he makes friends, uncovers secrets, and confronts the dark wizard who killed his parents.\\nThe book marked the beginning of a global phenomenon, captivating readers with its magical world, relatable characters, and themes of friendship, bravery, and self-discovery. J.K. Rowling’s imaginative storytelling has made the Harry Potter series one of the best-selling book series in history, inspiring movies, theme parks, and a dedicated fanbase.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/method/library_management.book_api.create_book",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"method",
+								"library_management.book_api.create_book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Harry Potter and the Sorcerer’s Stone",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "book_title",
+									"value": "Harry Potter and the Sorcerer’s Stone",
+									"type": "text"
+								},
+								{
+									"key": "isbn",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "publisher",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "publish_date",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/method/library_management.book_api.update_book?name=Harry Potter and the Sorcerer’s Stone&book_title=&author=&isbn=&publisher=&status=&publish_date=&description=",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"method",
+								"library_management.book_api.update_book"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Harry Potter and the Sorcerer’s Stone"
+								},
+								{
+									"key": "book_title",
+									"value": ""
+								},
+								{
+									"key": "author",
+									"value": ""
+								},
+								{
+									"key": "isbn",
+									"value": ""
+								},
+								{
+									"key": "publisher",
+									"value": ""
+								},
+								{
+									"key": "status",
+									"value": ""
+								},
+								{
+									"key": "publish_date",
+									"value": ""
+								},
+								{
+									"key": "description",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/method/library_management.book_api.delete_book?book_title=Harry Potter and the Sorcerer’s Stone",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"method",
+								"library_management.book_api.delete_book"
+							],
+							"query": [
+								{
+									"key": "book_title",
+									"value": "Harry Potter and the Sorcerer’s Stone"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/method/library_management.book_api.get_books",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"method",
+								"library_management.book_api.get_books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET A BOOK",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/method/library_management.book_api.get_book?book_title=To Kill a Mockingbird",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"method",
+								"library_management.book_api.get_book"
+							],
+							"query": [
+								{
+									"key": "book_title",
+									"value": "To Kill a Mockingbird"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"usr\": \"kebede@gmail.com\",\n  \"pwd\": \"kebede@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/method/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"method",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGOUT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/method/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"method",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Member",
+			"item": [
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/method/library_management.member_api.create_member?first_name=alemitu&last_name=abebe&email_address=alemitu@gmail.com&phone=0922334400",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"method",
+								"library_management.member_api.create_member"
+							],
+							"query": [
+								{
+									"key": "first_name",
+									"value": "alemitu"
+								},
+								{
+									"key": "last_name",
+									"value": "abebe"
+								},
+								{
+									"key": "email_address",
+									"value": "alemitu@gmail.com"
+								},
+								{
+									"key": "phone",
+									"value": "0922334400"
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"member_id\": \"LM00004\",\r\n    \"first_name\": \"alemitu\",\r\n    \"last_name\": \"kebede\",\r\n    \"email_address\": \"alemitu@yahoo.com\",\r\n    \"phone\": \"0999885533\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/method/library_management.member_api.update_member",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"method",
+								"library_management.member_api.update_member"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/method/library_management.member_api.delete_member?member_id=LM00004",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"method",
+								"library_management.member_api.delete_member"
+							],
+							"query": [
+								{
+									"key": "member_id",
+									"value": "LM00004"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/method/library_management.member_api.get_members",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"method",
+								"library_management.member_api.get_members"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET A Member",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/method/library_management.member_api.get_member?member_id=LM00004",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"method",
+								"library_management.member_api.get_member"
+							],
+							"query": [
+								{
+									"key": "member_id",
+									"value": "LM00004"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"usr\": \"kebede@gmail.com\",\n  \"pwd\": \"kebede@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/method/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"method",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGOUT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/method/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"method",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Membership",
+			"item": [
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"member_id\": \"LM00004\",\n    \"from_date\": \"2025-02-18\",\n    \"to_date\": \"2025-02-25\",\n    \"paid\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/method/library_management.membership_api.create_membership",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"method",
+								"library_management.membership_api.create_membership"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"member_id\": \"LM00004\",\r\n    \"from_date\": \"2025-02-18\",\r\n    \"to_date\": \"2025-03-25\",\r\n    \"paid\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/method/library_management.membership_api.update_membership",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"method",
+								"library_management.membership_api.update_membership"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/method/library_management.membership_api.delete_membership?member_id=LM00004",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"method",
+								"library_management.membership_api.delete_membership"
+							],
+							"query": [
+								{
+									"key": "member_id",
+									"value": "LM00004"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/method/library_management.membership_api.get_memberships",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"method",
+								"library_management.membership_api.get_memberships"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET A Membership",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/method/library_management.membership_api.get_membership?member_id=LM00001",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"method",
+								"library_management.membership_api.get_membership"
+							],
+							"query": [
+								{
+									"key": "member_id",
+									"value": "LM00001"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"usr\": \"kebede@gmail.com\",\n  \"pwd\": \"kebede@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/method/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"method",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGOUT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/method/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"method",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
